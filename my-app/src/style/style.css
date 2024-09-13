@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  scrollbar-width: thin;
+}
+
+body {
+  background-color: #c5c7f5;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+.container .todo-container {
+  width: 500px;
+  margin-top: 100px;
+}
+.container .todo-container .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #9395D3;
+  text-align: center;
+  font-family: "Roboto";
+  color: white;
+  height: 80px;
+  border-radius: 10px;
+}
+.container .todo-container .ol-list {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+.container .todo-container .ol-list ol {
+  padding: 0;
+  width: 350px;
+}
+.container .todo-container .ol-list ol li {
+  background-color: #ffffff;
+  margin: 20px 0;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.15);
+  font-weight: 500;
+  transition: all 400ms ease;
+}
+.container .todo-container .ol-list ol li .pen,
+.container .todo-container .ol-list ol li .deleted,
+.container .todo-container .ol-list ol li .confirmed {
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.3s, transform 0.3s;
+  margin-left: 10px;
+}
+.container .todo-container .ol-list ol li .pen {
+  color: #888;
+}
+.container .todo-container .ol-list ol li .pen:hover {
+  color: #333;
+  transform: scale(1.1);
+}
+.container .todo-container .ol-list ol li .deleted {
+  color: #ff0000;
+  font-size: 25px;
+}
+.container .todo-container .ol-list ol li .deleted:hover {
+  color: #cc0000;
+  transform: scale(1.1);
+}
+.container .todo-container .ol-list ol li .confirmed {
+  color: green;
+  font-size: 25px;
+}
+.container .todo-container .ol-list ol li .confirmed:hover {
+  color: #09cc00;
+  transform: scale(1.1);
+}
+.container .todo-container .goToTodoAdd {
+  display: block;
+  margin: 0 auto;
+  background-color: #9395D3;
+  color: white;
+  font-family: "Roboto";
+  border: none;
+  font-weight: bold;
+  width: 368px;
+  height: 65.07px;
+  font-size: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.todo-add-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 99.8vh;
+  border: solid 1px black;
+}
+.todo-add-container .main-container form input {
+  font-size: 20px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  width: 94%;
+}
+.todo-add-container .main-container form input::-moz-placeholder {
+  font-style: italic;
+}
+.todo-add-container .main-container form input::placeholder {
+  font-style: italic;
+}
+.todo-add-container .main-container form .submit {
+  display: block;
+  margin: 10px auto 0 auto;
+  background-color: #9395D3;
+  color: white;
+  font-family: "Roboto";
+  border: none;
+  font-weight: bold;
+  width: 368px;
+  height: 50px;
+  font-size: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.todo-add-container .main-container .goToTodo {
+  display: block;
+  margin: 50px auto 0 auto;
+  background-color: #9395D3;
+  color: white;
+  font-family: "Roboto";
+  border: none;
+  font-weight: bold;
+  width: 368px;
+  height: 65.07px;
+  font-size: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.line-through {
+  text-decoration: line-through;
+  color: gray;
+  transition: all 0.3s ease;
+}
+
+.line-through:hover {
+  color: darkgray;
+}
+
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+  background-color: #393838;
+  color: #e0e0e0;
+}
+body.dark-mode li {
+  background: linear-gradient(0.25turn, #3f4648, #ebf8e1, #fece9b);
+}
+body.dark-mode .header {
+  background: linear-gradient(0.25turn, #3f4648, #ebf8e1, #fece9b);
+  color: rgb(58, 55, 55) !important;
+}
+body.dark-mode .goToTodoAdd {
+  background: linear-gradient(0.25turn, #3f4648, #ebf8e1, #fece9b);
+  color: rgb(58, 55, 55) !important;
+}
+body.dark-mode .modal-title {
+  color: black;
+}
+body.dark-mode .goToTodo {
+  background: linear-gradient(0.25turn, #3f4648, #ebf8e1, #fece9b) !important;
+  color: rgb(58, 55, 55) !important;
+}
+body.dark-mode .submit {
+  background: linear-gradient(0.25turn, #3f4648, #ebf8e1, #fece9b) !important;
+  color: rgb(58, 55, 55) !important;
+}
+
+.dark-mode-toggle {
+  cursor: pointer;
+  font-size: 24px;
+  color: #ffffff;
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  transition: transform 0.3s ease;
+}
+
+.dark-mode .dark-mode-toggle {
+  color: #ffffff;
+  transform: rotate(180deg);
+}
+
+.light-mode .dark-mode-toggle {
+  color: #000000;
+  transform: rotate(0deg);
+}/*# sourceMappingURL=style.css.map */
